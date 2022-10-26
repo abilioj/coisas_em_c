@@ -1,0 +1,11 @@
+Traduzido da resposta original: https://stackoverflow.com/a/4749307/3861347
+
+Fazer o download do Ansicon https://github.com/adoxa/ansicon/downloads, descompactar dentro de um diretório sem espaços.
+
+Abrir o prompt de comando e navegar até a pasta que você descompactou.
+
+Agora, navegar até a pasta da arquitetura do seu sistema operacional x86 ou x64 e instalar globalmente ex: (D:\ansi160\x64)
+
+Digite ansicon.exe –i ou ansicon -i e aperte enter
+
+Agora qualquer programa que vá precisar printar as cores do ANSI vão funcionar.
