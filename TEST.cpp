@@ -4,8 +4,8 @@
 
 int main(void)
 {
-  setlocale(LC_ALL, "portuguese-brazilian");
-  printf("Utilizando caracteres e acentuação da língua portuguesa!\n\n");
+  setlocale(LC_ALL, "");
+  printf("Utilizando caracteres e acentuaÃ§Ã£o da lÃ­ngua portuguesa!\n\n");
   
   system("pause");
   return 0;

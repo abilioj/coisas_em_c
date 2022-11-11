@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1666753296 source:d:\users\ajgf\desktop\coisas_em_c\livro\testecodeblocks\bibcrtw.c
+	<stdio.h>
+	<windows.h>
+
+1668135627 source:d:\users\ajgf\desktop\coisas_em_c\livro\testecodeblocks\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"crt.h"
+
+1666753207 d:\users\ajgf\desktop\coisas_em_c\livro\testecodeblocks\crt.h
+

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 #include "crt.h"
 
@@ -14,6 +15,8 @@ float calculo(float X, float Y, char OPERADOR);
 
 int main(void)
 {
+    setlocale(LC_ALL, "Portuguese");
+
     int OPCAO = 0;
     while (OPCAO != 5)
     {
@@ -23,17 +26,17 @@ int main(void)
         position(2, 1);
         printf("--------------");
         position(4, 1);
-        printf("1 - Adicao");
+        printf("1 - Adição");
         position(5, 1);
-        printf("2 - Subtracao");
+        printf("2 - Subtração");
         position(6, 1);
-        printf("3 - Multiplicacao");
+        printf("3 - Multiplicação");
         position(7, 1);
         printf("4 - Divisao");
         position(8, 1);
         printf("5 - Fim de Programa");
         position(10, 1);
-        printf("Escolha uma opcao: ");
+        printf("Escolha uma opção: ");
         fflush(stdin);
         scanf("%d", &OPCAO);
         if (OPCAO != 5)
