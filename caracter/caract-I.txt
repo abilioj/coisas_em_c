@@ -1,0 +1,144 @@
+Caracteres especiais em linguagem C
+
+1 - " \n " - Quebra de linha
+Utiliza-se o "\n" quando se deseja que o cursor vá para o início da próxima linha, como se faz quando pressionamos a tecla "Enter":
+
+int main(){
+    printf("Reduto\nNERD");
+    return 0;
+}
+/* Resultará na saída:
+
+Reduto
+NERD
+
+*/
+
+
+2 - " \t " - Tabulação
+Utilizamos o "\t" quando queremos dar um espaço maior, equivalente à 8 espaços comuns mas, reparem bem, não são 8 caracteres somados ao que já está escrito. Da mesma forma como pressionar a tecla "Tab" num documento de texto, a tabulação funciona de acordo com o local do cursor como se a linha fosse dividida em conjuntos de 8 dígitos, ou seja, se já existir uma palavra menor que 8 letras, ao tentar utilizar este caractere, o mesmo levará o cursor para onde seria o 9º dígito contando do início e assim por diante em grupos de 8.
+
+int main(){
+    printf("Reduto\tNERD\n");
+    printf("oi\tpessoal\ttudo\tbem?");
+    return 0;
+}
+/* Resultará na saída:
+
+Reduto  NERD
+oi      pessoal tudo    bem?    
+
+*/
+
+
+3 - " \b " - "Backspace"
+O "\b" volta com o cursor para 1 dígito atrás, sem apagar o que já foi escrito, permitindo que sobrescreva este dígito.
+
+int main(){
+    printf("Reduto\bNERD");
+    return 0;
+}
+/* Resultará na saída:
+
+RedutNERD    
+
+*/
+
+
+4 - " \r " - Retorno de linha
+O "\r" funciona de forma semelhante ao "\b", porém, ao invés de voltar 1 caractere, ele coloca o cursor no início da linha atual, sem apagar nada, permitindo a sobrescrita.
+
+int main(){
+    printf("Reduto\rNERD");
+    return 0;
+}
+/* Resultará na saída:
+
+NERDuto
+
+*/
+
+
+5 - " \a " ou " \7 " - Beep!
+Estes dois caracteres executam um som, literalmente um "bip", pelas caixas de som ou pelo Speaker da máquina, tal como faz o POST quando se liga o PC.
+
+int main(){
+    printf("Reduto NERD\a\7");
+    return 0;
+}
+/* Resultará na saída: (soando dois bips)
+
+Reduto NERD
+
+*/
+
+
+6 - " \\ " - Imprime o caractere contrabarra (\)
+Como a contrabarra tornou-se um caractere auxiliar, caso haja necessidade de utilizá-lo, deve-se escrevê-lo duas vezes no código. Exemplificaremos um erro.
+
+int main(){
+    printf("Reduto \ NERD");//Isso causará um aviso de erro mas ainda irá compilar
+    printf("\n");//apenas uma linha para separarmos (já aprendemos isto, certo?)
+    printf("Reduto \\ NERD");//Forma correta
+    return 0;
+}
+/* Resultará na saída:
+
+Reduto  NERD
+Reduto \ NERD
+
+*/
+
+
+7 - " \" " - Imprime o caractere aspas (")
+Tal como a contrabarra, as aspas são caracteres reservados usados em duplas para representar uma string (cadeia de caracteres). Sendo assim, caso seja necessário imprimir aspas no programa, estas deve vir precedidas da contrabarra para que não haja o fechamento/abertura de novas cadeias, transformando textos em códigos e vice-versa. Exemplificaremos o erro separadamente.
+
+//O erro
+int main(){
+    printf("Reduto " NERD");//Isso causará um erro e o programa não será compilado
+    return 0;
+}
+
+
+//A forma correta
+int main(){
+    printf("Reduto \" NERD");
+    return 0;
+}
+/* Resultará na saída:
+
+Reduto " NERD
+
+*/
+
+
+8 - " \' " - Representa o caractere apóstrofo (")
+É necessário somente se quisermos atribuir à uma variável char ou imprimir somente o caractere apóstrofo com uma função que só imprima um caractere devido ao fato de que um caractere seja representado por entre apóstrofos . Exemplificaremos o erro separadamente.
+
+//O erro
+int main(){
+    //Declaração de variável
+    char c = '''; //Isso causará um erro e o programa não será compilado
+    //Impressão de caractere
+    putchar('''); //Isso causará o mesmo erro
+    return 0;
+}
+
+
+//A forma correta
+int main(){
+    //Declaração de variável
+    char c = '\'');
+
+    printf("Assim que se imprime um apostrofo: ");
+
+    //Impressão de caractere
+    putchar('\'');
+    return 0;
+}
+/* Resultará na saída:
+
+Assim que se imprime um apostrofo: '
+
+*/
+

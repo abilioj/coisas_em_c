@@ -1,3 +1,0 @@
-# coisas_em_c
-
-<h1>CODICO DE ESTUDO PRARA DESENVOLVER O PIM IV</h1>
